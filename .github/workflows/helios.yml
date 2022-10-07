@@ -1,0 +1,10 @@
+name: helios-mirror
+on:
+  push:
+  workflow_dispatch:
+jobs:
+  mirror-bot:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Running helios-bot in github action
+        run: wget https://raw.githubusercontent.com/rooted-cyber/Docker/main/helios/user-tg/Dockerfile;wget https://raw.githubusercontent.com/rootedcyber93/mbot-flow/main/mbot.sh;sudo sh mbot.sh
